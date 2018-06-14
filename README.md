@@ -1,6 +1,8 @@
 # Spring Boot Hello World Example with JSP
 
-## Guide
+Sample Java application for testing workflows with KubeAM
+
+## Based on
 https://hellokoding.com/spring-boot-hello-world-example-with-jsp/
 
 ## What you'll need
@@ -11,5 +13,12 @@ https://hellokoding.com/spring-boot-hello-world-example-with-jsp/
 - Spring Boot
 - Java
 
-## Run
+## Run localy
 `mvn spring-boot:run`
+
+## Build Docker
+`mvn package`
+`docker build . -t localhost:5000/springboot-jsp`
+
+## Run Docker
+`docker run --rm -d -p 8080:8080 localhost:5000/springboot-jsp`
